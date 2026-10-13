@@ -43,7 +43,7 @@
     var params = new URLSearchParams(window.location.search);
     var reference = params.get('reference') || params.get('trxref');
 
-    // Notify the opener (Flutter tab) — only works if tab was opened without noopener
+    // Notify the opener (Flutter tab) - only works if tab was opened without noopener
     if (window.opener) {
       window.opener.postMessage(
         { type: 'PAYSTACK_PAYMENT_COMPLETE', reference: reference },
